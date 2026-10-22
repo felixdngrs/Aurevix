@@ -1,0 +1,57 @@
+# Aurevix C23 coding style
+# Use clang-format 15 or newer for InsertBraces support.
+
+BasedOnStyle: LLVM
+
+# Layout: four spaces, no tabs, 100 columns
+IndentWidth: 4
+ContinuationIndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 100
+
+# Allman style: place opening braces on their own lines.
+BreakBeforeBraces: Allman
+
+# Require braces for if/else/for/while/do bodies when formatting.
+# This is a best-effort transformation: review changes, especially macros.
+InsertBraces: true
+AllowShortBlocksOnASingleLine: Never
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+
+# Pointer and reference alignment: int *ptr
+PointerAlignment: Right
+DerivePointerAlignment: false
+ReferenceAlignment: Right
+
+# Prefer clear, predictable wrapping and limited column alignment.
+AlignOperands: Align
+AlignConsecutiveAssignments: None
+AlignConsecutiveDeclarations: None
+AlignTrailingComments: true
+BreakBeforeBinaryOperators: None
+BinPackArguments: false
+BinPackParameters: false
+
+# Keep include order intentional in low-level platform-specific code.
+SortIncludes: Never
+IncludeBlocks: Preserve
+
+# Space conventions.
+SpaceBeforeParens: ControlStatements
+SpaceBeforeAssignmentOperators: true
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+SpaceAfterCStyleCast: false
+
+# Avoid compact forms that obscure control flow and initialization.
+AllowShortEnumsOnASingleLine: false
+Cpp11BracedListStyle: true
+
+# Keep empty lines restrained and files easy to review.
+MaxEmptyLinesToKeep: 1
+KeepEmptyLinesAtTheStartOfBlocks: false
+ReflowComments: true
